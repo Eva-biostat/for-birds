@@ -4,7 +4,7 @@ library(reshape2)
 library(dplyr)
 library(purrr)
 
-thumb <- function(ANGEL, COCO, ID){
+bom_thmb <- function(ANGEL, COCO, ID){
   # angel - bird or man?
   # coco - filename
   # id - id number
@@ -125,17 +125,17 @@ thumb <- function(ANGEL, COCO, ID){
   save(thmb,COCO, file=paste(COCO,".Rda"))
 }
 
-thumb(ANGEL = "man", COCO = "actor1", ID = 1)
-thumb(ANGEL = "man", COCO = "actor2", ID = 2)
-thumb(ANGEL = "man", COCO = "actor3", ID = 3)
-thumb(ANGEL = "man", COCO = "actor4", ID = 4)
-thumb(ANGEL = "man", COCO = "actor5", ID = 5)
-thumb(ANGEL = "man", COCO = "actor6", ID = 6)
-thumb(ANGEL = "man", COCO = "actor7", ID = 7)
-thumb(ANGEL = "man", COCO = "actor8", ID = 8)
-thumb(ANGEL = "man", COCO = "actor9", ID = 9)
-thumb(ANGEL = "man", COCO = "actor10", ID = 10)
-thumb(ANGEL = "man", COCO = "Eva", ID = 11)
+bom_thmb(ANGEL = "man", COCO = "actor1", ID = 1)
+bom_thmb(ANGEL = "man", COCO = "actor2", ID = 2)
+bom_thmb(ANGEL = "man", COCO = "actor3", ID = 3)
+bom_thmb(ANGEL = "man", COCO = "actor4", ID = 4)
+bom_thmb(ANGEL = "man", COCO = "actor5", ID = 5)
+bom_thmb(ANGEL = "man", COCO = "actor6", ID = 6)
+bom_thmb(ANGEL = "man", COCO = "actor7", ID = 7)
+bom_thmb(ANGEL = "man", COCO = "actor8", ID = 8)
+bom_thmb(ANGEL = "man", COCO = "actor9", ID = 9)
+bom_thmb(ANGEL = "man", COCO = "actor10", ID = 10)
+bom_thmb(ANGEL = "man", COCO = "Eva", ID = 11)
 
 thumb(ANGEL = "bird", COCO = "bird1", ID = 1)
 thumb(ANGEL = "bird", COCO = "bird2", ID = 2)

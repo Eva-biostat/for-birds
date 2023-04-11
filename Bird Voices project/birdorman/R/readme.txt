@@ -1,1 +1,1 @@
-bom_fuze can be written more elegantly
+bom_fuze() can be written more elegantly
