@@ -23,6 +23,7 @@ bom_viz <- function(A1, A2){
     scale_x_continuous(breaks=seq(-100, 0, 20)) +
     scale_y_continuous(breaks=seq(-100, 0, 20)) +
     geom_point(color = dplyr::case_when(ADaM$id == 11 ~ "green" )) +
+    #11 - this is me, hehehe
     theme_minimal()
 
   p1 + p2
