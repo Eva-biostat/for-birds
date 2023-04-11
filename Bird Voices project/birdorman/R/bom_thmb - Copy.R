@@ -147,5 +147,5 @@ thumb(ANGEL = "bird", COCO = "bird7", ID = 7)
 thumb(ANGEL = "bird", COCO = "bird8", ID = 8)
 thumb(ANGEL = "bird", COCO = "bird9", ID = 9)
 thumb(ANGEL = "bird", COCO = "bird10", ID = 10)
-#thumb(ANGEL = "bird", COCO = "Eva's toy cardinal", ID = 11)
+thumb(ANGEL = "bird", COCO = "loon", ID = 11)
 
