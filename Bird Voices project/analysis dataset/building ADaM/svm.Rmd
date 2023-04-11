@@ -1,0 +1,85 @@
+---
+title: "svm"
+author: "Eva V. Zadorozny"
+date: "2023-04-09"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+library(patchwork)
+library(tidyverse)
+library(e1071)
+```
+
+
+```{r}
+load("ADaM.Rda")
+str(ADaM)
+library(patchwork)
+```
+
+
+```{r}
+
+load("ADaM.Rda")
+
+ADaM$birdorman <- as.factor(ADaM$birdorman)
+
+str(ADaM)
+
+ADaM %>% 
+  ggplot(aes(x = Amp2, y = Amp1, color = birdorman, label = id)) +
+  #geom_point() + 
+  geom_text() +
+  scale_x_continuous(breaks=seq(-100, 0, 20)) +
+  scale_y_continuous(breaks=seq(-100, 0, 20)) +
+  #geom_point(color = dplyr::case_when(ADaM$id > 9 ~ "#1b9e77" )) + 
+  theme_minimal()
+
+svmfit = svm(birdorman ~ .,
+             data = ADaM,
+             kernel = "polynomial",
+             #cost = 10,
+             scale = FALSE)
+
+# how well we did                        
+table(ADaM$birdorman, predict(svmfit))
+
+plot(svmfit, ADaM, Amp1~Amp2)
+
+predictions <- predict(svmfit, ADaM)
+
+# Calculate the confusion matrix
+confusion_matrix <- table(Predicted = predictions, Actual = ADaM$birdorman)
+
+confusion_matrix
+
+# Calculate accuracy
+accuracy <- sum(diag(confusion_matrix)) / sum(confusion_matrix)
+cat("Accuracy:", accuracy)
+
+print(svmfit)
+
+load(thumbprint)
+
+```
+
+```{r}
+#setwd("C:/Users/eva/OneDrive/Documents/GitHub/for-birds/Bird Voices project/analysis dataset/building ADaM")
+#load(thumbprint)
+str(thumbprint)
+thumbprint$birdorman <- as.factor(thumbprint$birdorman)
+plot(svmfit, thumbprint, Amp1~Amp2)
+```
+
+
