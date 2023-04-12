@@ -1,0 +1,39 @@
+---
+title: "birdorman-vignette"
+author: "Eva V. Zadorozny"
+date: "2023-04-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# The graphs appear in a new window, so I can align SVM with ggplot
+# and it is easy for everyone to see
+
+library(birdorman)
+```
+
+```{r}
+bom_thmb(ANGEL = "man", COCO = "Eva", ID = 11)
+```
+
+```{r}
+bom_fuze()
+```
+
+```{r}
+bom_viz("Amp1", "Amp2")
+```
+
+```{r}
+bom_svm_train()
+```
+
+```{r}
+bom_svm_test(COCO = "loon ")
+```
+
+

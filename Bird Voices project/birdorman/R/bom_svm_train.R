@@ -1,9 +1,15 @@
-library(tidyverse)
-library(e1071)
+#library(tidyverse)
+#library(e1071)
 
+#' Training Support Vector Machine on analysis data model (ADaM)
+#'
+#' @return - graphical and accuracy output that the training was successful
+#' @export
+#' @import tidyverse e1071
+#' @examples - bom_svm_train()
 bom_svm_train <- function(){
 
-setwd("C:/Users/eva/OneDrive/Desktop/local birdorman/birdorman/data")
+setwd("C:/Users/eva/OneDrive/Desktop/local birdorman/extraneous stuff/data")
 load("ADaM.Rda")
 str(ADaM)
 
@@ -45,4 +51,4 @@ print(svmfit)
 
 }
 
-bom_svm_train()
+#bom_svm_train()

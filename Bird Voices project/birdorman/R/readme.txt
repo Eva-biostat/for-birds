@@ -1,1 +1,0 @@
-bom_fuze() can be written more elegantly

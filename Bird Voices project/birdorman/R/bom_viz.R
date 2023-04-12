@@ -1,9 +1,18 @@
-library(patchwork)
-library(tidyverse)
-library(ggplot2)
+# library(patchwork)
+# library(tidyverse)
+# library(ggplot2)
 
+#' Visualizes clusters of birds and men after wave processing
+#' in any amplitude plane
+#' @param A1 - Amplitude variable 1 (Amp1 - Am10)
+#' @param A2 - Amplitude variable 2 (Amp1 - Am10)
+#'
+#' @return - side-by-side plots with and without id labels showing birds and men
+#' @export
+#' @import patchwork tidyverse ggplot2
+#' @examples - bom_viz(A1 = "Amp1", A2 = "Amp2")
 bom_viz <- function(A1, A2){
-  setwd("C:/Users/eva/OneDrive/Desktop/local birdorman/birdorman/data")
+  setwd("C:/Users/eva/OneDrive/Desktop/local birdorman/extraneous stuff/data")
   load("ADaM.Rda")
   str(ADaM)
 
@@ -29,6 +38,6 @@ bom_viz <- function(A1, A2){
   p1 + p2
 }
 
-bom_viz(A1 = "Amp1", A2 = "Amp2")
-bom_viz(A1 = "Amp1", A2 = "Amp3")
-bom_viz(A1 = "Amp5", A2 = "Amp10")
+# bom_viz(A1 = "Amp1", A2 = "Amp2")
+# bom_viz(A1 = "Amp1", A2 = "Amp3")
+# bom_viz(A1 = "Amp5", A2 = "Amp10")

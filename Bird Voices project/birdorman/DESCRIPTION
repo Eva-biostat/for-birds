@@ -1,11 +1,20 @@
 Package: birdorman
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Differentiating voices of men and birds
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors: Eva V. Zadorozny, Benjamin Panny, Michelle Sun
+Maintainer: <evaz@pitt.edu>
+Description: This package processes, visualizes and analyzes sound waves initially 
+saved in wav files. First it draws a spectrogram and converts each wav to a numeric 
+thumbprint. Then it fuzes the thumbprints into an analysis data model. This data
+set is visualized using color-coded clusters of birds and men in amplitude planes of
+choice. Afterwards, Support Vector Machine is trained using this ADaM data set. Finally, 
+we ask questions about individual thumbprints, old and new (even Eva and a toy loon) to
+see what the algorithm would predict - is this a bird or a man?
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.2.3
+Imports: tuneR, seewave, reshape2, dplyr, purrr, tidyverse, e1071, patchwork, ggplot2
+URL: https://github.com/Eva-biostat/birdorman
+BugReports: https://github.com/Eva-biostat/birdorman/issues
