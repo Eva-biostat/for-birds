@@ -23,7 +23,7 @@ thumb <- function(ANGEL, COCO, ID){
   # gives three measurements: Time, Frequency, Amplitude
 
   # needs large margins, even better - new window
-  dev.off()
+  #dev.off()
   par(mar=c(1,1,1,1))
   dev.new()
   ss = spectro(wav)
