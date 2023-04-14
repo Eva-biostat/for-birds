@@ -9,7 +9,7 @@ bom_fuze <- function(){
 setwd("C:/Users/eva/OneDrive/Desktop/local birdorman/extraneous stuff/data")
   #bind into analysis data model (ADaM)
  load("actor1 .Rda")
-  r1 <- thmb
+  r1 <- thmb # test pull
   load("actor2 .Rda")
   r2 <- thmb
   load("actor3 .Rda")
